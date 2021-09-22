@@ -1,8 +1,158 @@
 <h2 class="book-brand">
-  <a class="flex align-center" href="{{ cond (not .Site.Home.File) .Sites.First.Home.RelPermalink .Site.Home.RelPermalink }}">
+  <div class="dl_warp">
+    <!-- © nickhoo.com -->
+    <button id="mode"  class="dl_bt" type="button" aria-label="Toggle mode" onclick="cl_bt()">
+      
+      <span id="dl_toggle_light" class="dl_toggle-warp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="dl_toggle-text-warp">light</span>
+      </span> 
+
+      <span id="dl_toggle_auto" class="dl_toggle-warp" >
+        <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+            <title>页面 1</title>
+            <desc>Created with Sketch.</desc>
+            <defs>
+                <path d="M17.8818768,8.825 C18.5430425,12.4942531 16.4085262,16.0920741 12.871319,17.2705153 C9.33411179,18.4489564 5.46831686,16.8501741 3.79676236,13.5175379 C2.12520786,10.1849017 3.15547562,6.1303951 6.21521013,4 C5.47030489,8.00165979 6.55723028,10.6345657 9.47598632,11.8987179 C12.1944758,13.0761319 14.9964393,12.0515592 17.8818768,8.825 Z" id="path-1"></path>
+                <filter x="-21.1%" y="-23.2%" width="142.2%" height="146.4%" filterUnits="objectBoundingBox" id="filter-2">
+                    <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+                    <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+                    <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+                    <feColorMatrix values="0 0 0 0 0.988235294   0 0 0 0 0.733333333   0 0 0 0 0.0117647059  0 0 0 0.8 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+                </filter>
+            </defs>
+            <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8.5,5 C10.4329966,5 12,6.56700338 12,8.5 C12,10.4329966 10.4329966,12 8.5,12 C6.56700338,12 5,10.4329966 5,8.5 C5,6.56700338 6.56700338,5 8.5,5 Z" id="形状结合" stroke="#000000" stroke-width="1.66666667"></path>
+                <line x1="2.5" y1="5" x2="3.67" y2="5" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(3.085000, 5.000000) rotate(30.000000) translate(-3.085000, -5.000000) "></line>
+                <line x1="5.5" y1="2" x2="6.67" y2="2" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(6.085000, 2.000000) rotate(70.000000) translate(-6.085000, -2.000000) "></line>
+                <line x1="1.5" y1="9.16666667" x2="2.67" y2="9.16666667" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(2.085000, 9.166667) rotate(5.000000) translate(-2.085000, -9.166667) "></line>
+                <g id="路径" transform="translate(10.500780, 10.828079) scale(-1, 1) rotate(30.000000) translate(-10.500780, -10.828079) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <path stroke="#000000" stroke-width="1.66666667" d="M5.73903931,3.31610981 C4.0391868,4.49966265 2.90307506,6.21769089 2.42408679,8.10269707 C1.94509852,9.98770325 2.12323373,12.0396874 3.05187512,13.8911519 C3.98051651,15.7426165 5.51866912,17.112455 7.31594018,17.8557549 C9.11321123,18.5990549 11.1696007,18.7158163 13.1347158,18.0611268 C15.099831,17.4064372 16.6753097,16.0796977 17.6676811,14.4070122 C18.6600525,12.7343266 19.0693166,10.7156949 18.7020023,8.67722092 C18.6011164,8.11733733 18.4458547,7.57930468 18.2423322,7.06805551 C17.9517054,7.46258695 17.6242612,7.86295474 17.2607004,8.2694963 C15.9290261,9.75860358 14.6257479,10.7569432 13.3301401,11.2306982 C12.1381902,11.6665494 10.9638512,11.6349947 9.8071842,11.1340268 C8.56794381,10.5972953 7.70496074,9.77937828 7.24200288,8.65793562 C6.7494191,7.46472883 6.69798247,5.96012884 7.03447006,4.15250447 C7.15434787,3.50851622 7.30632486,2.91812921 7.49251027,2.38256248 C6.88418009,2.61803413 6.29524715,2.92884011 5.73903931,3.31610981 Z"></path>
+                </g>
+            </g>
+        </svg>
+        <span class="dl_toggle-text-warp">
+          <span style="
+          position: relative;
+          display: inline-block;
+          /* height: 0.7rem; */
+          ">
+            <span style="
+            /* background-color: burlywood; */
+            /* line-height: 0.7rem; */
+            /* height: 0.7rem; */
+            display: inline-block;
+            font-size: 1rem;
+            clip-path: polygon(0% 0%, 100% 0%,100% 40%, 0% 70%);
+            color: #fbe247a6;
+            position: absolute;">
+              auto
+            </span>
+            <span style="
+            /* background-color: rgb(135, 222, 157); */
+            /* line-height: 0.7rem; */
+            /* height: 0.7rem; */
+            display: inline-block;
+            font-size: 1rem;
+            clip-path: polygon(100% 40%, 100% 100%, 0% 100%,0% 70%);
+            color: #000;
+            position: absolute;">
+              auto
+            </span>
+            <span style="background-color: transparent;
+            /* line-height: 0.7rem; */
+            /* height: 0.7rem; */
+            display: inline-block;
+            font-size: 1rem;
+            clip-path: polygon(100% 30%, 100% 100%, 0% 100%,0% 80%);
+            color: transparent;
+            ">
+              auto
+            </span>
+          </span>
+        </span>
+      </span>
+              
+      <span id="dl_toggle_dark" class="dl_toggle-warp">
+        <svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+            <title>moon</title>
+            <desc>Created with Sketch.</desc>
+            <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="moon" transform="translate(-1.566987, 0.583333)" stroke="#E9ECEF" stroke-width="1.66666667">
+                    <path d="M5.85716251,2.31610981 C4.15731,3.49966265 3.02119826,5.21769089 2.54220999,7.10269707 C2.06322172,8.98770325 2.24135693,11.0396874 3.16999832,12.8911519 C4.09863971,14.7426165 5.63679233,16.112455 7.43406338,16.8557549 C9.23133443,17.5990549 11.2877239,17.7158163 13.252839,17.0611268 C15.2179542,16.4064372 16.7934329,15.0796977 17.7858043,13.4070122 C18.7781757,11.7343266 19.1874398,9.71569488 18.8201255,7.67722092 C18.7077386,7.0535106 18.5278716,6.45691722 18.2889781,5.89425984 C18.0238467,6.36097092 17.7061349,6.83604881 17.3373367,7.31970629 C16.1905554,8.82364331 14.9930349,9.82928264 13.7175587,10.2956763 C12.5064553,10.7385313 11.2374942,10.6728227 9.91072093,10.1278731 C8.62639899,9.60035965 7.73707852,8.79176716 7.27475587,7.67186321 C6.78423425,6.48365167 6.76223105,4.98140922 7.14828253,3.1740754 C7.29081338,2.50680475 7.46712102,1.90021687 7.67979896,1.35596559 C7.04695136,1.59460576 6.43443176,1.91417573 5.85716251,2.31610981 Z" id="路径" transform="translate(10.618903, 9.828079) scale(-1, 1) rotate(30.000000) translate(-10.618903, -9.828079) "></path>
+                </g>
+            </g>
+        </svg>
+        <span class="dl_toggle-text-warp" style="color: #e9ecef;">dark</span>
+      </span>
+    </button>
+  </div>
+  <a href="{{ .Site.BaseURL | relLangURL }}">
     {{- with .Site.Params.BookLogo -}}
     <img src="{{ . | relURL }}" alt="Logo" />
     {{- end -}}
     <span>{{ .Site.Title }}</span>
   </a>
 </h2>
+<script>
+  // © nickhoo.com
+  var the_html = document.getElementsByTagName('html')[0]
+  var dl_list = [];
+  dl_list.push(document.getElementById("dl_toggle_light"))
+  dl_list.push(document.getElementById("dl_toggle_auto"))
+  dl_list.push(document.getElementById("dl_toggle_dark"))
+
+  var dl_bt = document.getElementById("mode");
+
+  var theme = {
+    mode:null
+  }
+  // var theme = {
+  //   mode:1 //0 light,1 auto,2 dark
+  // }
+  theme.mode = localStorage.getItem("theme.mode")===null?null:parseInt(localStorage.getItem("theme.mode"));
+  if(theme.mode===null){
+    theme.mode = 1
+  }
+  
+  function toggle_mode(i){
+    dl_list.forEach((element,index) => {
+      if (index === i) {
+        element.style.display = ''
+      }
+      else {
+        element.style.display = 'none'
+      }
+    });
+
+    switch (i) {
+      case 0:
+        the_html.className = 'light'
+        break;
+      case 1:
+        the_html.className = ''
+        break;
+      case 2:
+        the_html.className = 'dark'
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  toggle_mode(theme.mode);
+  
+  function cl_bt (e) {
+    theme.mode++;
+    if(theme.mode > 2) {
+      theme.mode = 0;
+    }
+      localStorage.setItem("theme.mode", theme.mode);
+      toggle_mode(theme.mode)
+  }
+</script>

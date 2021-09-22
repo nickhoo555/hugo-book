@@ -65,7 +65,6 @@
 
   img {
     max-width: 100%;
-    height: auto;
   }
 
   code {
@@ -139,7 +138,7 @@
     }
 
     dd {
-      margin-inline-start: 0;
+      margin-inline-start: $padding-16;
       margin-bottom: $padding-16;
     }
   }

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+
 <head>
+  {{ hugo.Generator }}
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}
 </head>
+
 <body dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       <div class="book-menu-content">
+
         {{ template "menu" . }} <!-- Left menu Content -->
+        
       </div>
+      
     </aside>
 
     <div class="book-page">
@@ -24,8 +30,24 @@
       {{ partial "docs/inject/content-after" . }}
 
       <footer class="book-footer">
-        {{ template "footer" . }} <!-- Footer under page content -->
-        {{ partial "docs/inject/footer" . }}
+        <div class="flex flex-wrap justify-between">
+          {{ if .Site.IsMultiLingual }}
+            {{ partial "docs/languages" . }}
+          {{ end }}
+          
+          {{ if .GitInfo }} 
+            <div style="color: #bbbbbb;">
+              {{- $date := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
+              {{- $commitPath := default "commit" .Site.Params.BookCommitPath -}}
+              <div class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+                <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon"   style="filter: invert(82%) sepia(0%) saturate(29%) hue-rotate(197deg) brightness(93%) contrast(89%);" alt="Calendar" />
+                <span>{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }} | git hash:{{ .GitInfo.Hash }}</span>
+              </div>
+            </div>
+          {{ end }}
+          
+          </div>
+          
       </footer>
 
       {{ template "comments" . }} <!-- Comments block -->
@@ -44,6 +66,7 @@
 
   {{ partial "docs/inject/body" . }}
 </body>
+
 </html>
 
 {{ define "menu" }}

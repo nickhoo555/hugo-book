@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>页面 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="8.16666667" cy="8.16666667" r="4.16666667"></circle>
+        <filter x="-136.0%" y="-136.0%" width="324.0%" height="324.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.833333333" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="-2" dy="-2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="-2" dy="-2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.988235294   0 0 0 0 0.733333333   0 0 0 0 0.0117647059  0 0 0 0.8 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="sun" transform="translate(4.000000, 4.000000)">
+            <g id="椭圆形">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#000000" stroke-width="1.66666667" xlink:href="#path-1"></use>
+            </g>
+            <line x1="7" y1="0.5" x2="7" y2="1.67" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(7.000000, 1.085000) rotate(-5.000000) translate(-7.000000, -1.085000) "></line>
+            <line x1="2.5" y1="3" x2="3.67" y2="3" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(3.085000, 3.000000) rotate(50.000000) translate(-3.085000, -3.000000) "></line>
+            <line x1="0.5" y1="7.16666667" x2="1.67" y2="7.16666667" id="路径" stroke="#000000" stroke-width="1.66666667" transform="translate(1.085000, 7.166667) rotate(5.000000) translate(-1.085000, -7.166667) "></line>
+        </g>
+        <path d="M8.73903931,5.31610981 C7.0391868,6.49966265 5.90307506,8.21769089 5.42408679,10.1026971 C4.94509852,11.9877033 5.12323373,14.0396874 6.05187512,15.8911519 C6.98051651,17.7426165 8.51866912,19.112455 10.3159402,19.8557549 C12.1132112,20.5990549 14.1696007,20.7158163 16.1347158,20.0611268 C18.099831,19.4064372 19.6753097,18.0796977 20.6676811,16.4070122 C21.6600525,14.7343266 22.0693166,12.7156949 21.7020023,10.6772209 C21.6389374,10.3272315 21.5546244,9.98578057 21.450557,9.65407311 C21.1626916,9.7893698 20.8624104,9.9249912 20.5500546,10.0605796 C17.5182794,11.3766229 15.2610492,11.8595622 13.8094028,11.2807946 C11.851384,10.5001377 10.6323965,8.64091235 10.0301032,5.82566216 C9.94518517,5.42873663 9.87922869,5.04413615 9.83268715,4.67203382 C9.45727678,4.85589735 9.0915844,5.07064396 8.73903931,5.31610981 Z" id="moon" stroke="#000000" stroke-width="1.66666667" fill="#000000" transform="translate(13.500780, 12.828079) scale(-1, 1) rotate(30.000000) translate(-13.500780, -12.828079) "></path>
+    </g>
+</svg>

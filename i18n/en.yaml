@@ -11,4 +11,7 @@
   translation: Expand
 
 - id: bookSearchConfig
-  translation: '{ cache: true }'
+  translation: |
+    {
+      split: " "
+    }
